@@ -8,7 +8,7 @@ public class Hangman {
         Random rand_new = new Random();
         String[] phrases1 = {"Awkward", "Zombie", "Twelfth", "Jazz", "Linguistic", "Oxygen", "Pajama", "Gazebo", "Hazard" +
                 "Ivory", "Bagpipes", "Kayak", "Unzip", "Rhythmic", "Pixel", "Buzz", "Quiz", "Fox", "Bark"};
-        String[] phrases2 = {"Bored to death", "This is easy", ""};
+        String[] phrases2 = {"Bored to death", "This is easy", "Coding is easy", "I love food", "Dogs are nice", "Birds rock" };
 
         System.out.println("Welcome to the hangman game");
         System.out.println("Your phrase has been chosen");
