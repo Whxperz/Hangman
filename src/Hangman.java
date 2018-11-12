@@ -3,7 +3,7 @@ import java.util.Random;
 public class Hangman {
 
     public static void main(String[] args) {
-        Scanner keyboard;
+       /* Scanner keyboard;
         keyboard = new Scanner(System.in);
 
         String[] phrases1 = {"Awkward", "Zombie", "Twelfth", "Jazz", "Linguistic", "Oxygen", "Pajama", "Gazebo", "Hazard" +
@@ -12,7 +12,8 @@ public class Hangman {
         int length;
         length = phrases1.length;
         int randomOne = (int) (Math.random() * length);
-        int answer;
+        int answer = keyboard.nextInt();
+*/
 
         /*System.out.println("Welcome to the hangman game");
         System.out.println("Please pick your difficulty level. Easy/Difficult?");
@@ -25,23 +26,51 @@ public class Hangman {
         System.out.println("For each letter that's guessed wrong a body part will be added to the gallows");
         System.out.println("If you can guess all the letters within 15 tries you win!");
         System.out.println("Please pick a letter");*/
-        System.out.println("        _______________________");
-        System.out.println("        |  /                  |");
-        System.out.println("        | /                   |        Letters:");
-        System.out.println("        |/                    O)");
-        System.out.println("        |                  \\ | /        Tries:");
-        System.out.println("        |                   \\|/");
-        System.out.println("        |                     |");
-        System.out.println("        |                     |");
-        System.out.println("        |                    / \\");
-        System.out.println("        |                  _/   \\_");
-        System.out.println("        |                         ");
-        System.out.println("        |                         ");
-        System.out.println("________|_________                ");
-        answer = keyboard.nextInt();
-        System.out.println(randomOne);
+        /*int numberofIncorrectGuesses = keyboard.nextInt();
+        switch(numberofIncorrectGuesses) {
+            case 1 :
+                System.out.println("");
+                break;
+            case 2:
+            System.out.println("        |  /                  |");
+            break;
+            case 3:
+            System.out.println("        | /                   |        Letters:");
+            break;
+            case 4:
+            System.out.println("        |/                    O)");
+            break;
+            case 5:
+            System.out.println("        |                  \\ | //        Tries:");
+            break;
+            case 6:
+            System.out.println("        |                   \\|/");
+            break;
+            case 7:
+            System.out.println("        |                     |");
+            break;
+            case 8:
+            System.out.println("        |                     |");
+            break;
+            case 9:
+            System.out.println("        |                    / \");
+            break;
+            case 10:
+            System.out.println("        |                  _/   \_");
+            break;
+            case 11:
+            System.out.println("        |                         ");
+            break;
+            case 12:
+            System.out.println("        |                         ");
+            break;
+            case 13:
+            System.out.println("________|_________                ");
+            break;
+            System.out.println(randomOne);
     }
-
+*/
+            System.out.println("\n"+"\n|"+"\n|"+"\n|"+"\n|"+"\n|"+"\n|"+"\n|"+"\n|"+"\n|"+"\n|"+"\n|");
 
     }
 
