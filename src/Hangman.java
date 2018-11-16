@@ -5,9 +5,6 @@ public class Hangman {
     public static void main(String[] args) {
 
         Scanner keyboard;
-        keyboard = new Scanner(System.in);
-
-
 
 
         System.out.println("Welcome to the hangman game");
@@ -24,25 +21,20 @@ public class Hangman {
 
 
 
-
-
-
-
-
         keyboard = new Scanner(System.in);
 
         String[] phrases1 = {"Awkward", "Zombie", "Twelfth", "Jazz", "Linguistic", "Oxygen", "Pajama", "Gazebo", "Hazard" ,"Capture" +
                 "Ivory", "Bagpipes", "Kayak", "Unzip", "Rhythmic", "Pixel", "Buzz", "Quiz", "Fox", "Bark"};
-        String word = phrases1[(int) (Math.random() * phrases1.length)];
+        String word = phrases1[(int) (Math.random() * phrases1.length)].toLowerCase();
         String hyphen = new String(new char[word.length()]).replace("\0", "-");
         int count = 0;
 
-        while (count < 10 && hyphen.contains("-")) {
+        while (count < 12 && hyphen.contains("-")) {
             System.out.println();
             System.out.println("Please pick a letter");
             System.out.println();
             System.out.println(hyphen);
-            String guess = keyboard.next();
+            String guess = keyboard.next().toLowerCase();
             String newhyphen = "";
             for (int i = 0; i < word.length(); i++) {
                 if (word.charAt(i) == guess.charAt(0)) {
@@ -53,6 +45,10 @@ public class Hangman {
                     newhyphen += "-";
                 }
             }
+
+            if(word.contains(guess)){
+
+            };
 
             if (hyphen.equals(newhyphen)) {
                 count++;
@@ -201,7 +197,7 @@ public class Hangman {
                     System.out.println("________|_________                ");
                 }
                 if (count == 10) {
-                    System.out.println("Game finished!");
+                    System.out.println("Wrong guess, try again");
                     System.out.println("        _______________________");
                     System.out.println("        |  /                  |");
                     System.out.println("        | /                   |       ");
@@ -216,6 +212,40 @@ public class Hangman {
                     System.out.println("        |                         ");
                     System.out.println("________|_________                ");
                     System.out.println("Game finished! The word was " + word);
+                }
+                if (count == 11) {
+                    System.out.println("Wrong guess, try again");
+                    System.out.println("        _______________________");
+                    System.out.println("        |  /                  |");
+                    System.out.println("        | /                   |       ");
+                    System.out.println("        |/                    O");
+                    System.out.println("        |                  -\\ | /-        ");
+                    System.out.println("        |                    \\|/");
+                    System.out.println("        |                     |");
+                    System.out.println("        |                     |");
+                    System.out.println("        |                    / \\");
+                    System.out.println("        |                  _/   \\_");
+                    System.out.println("        |                         ");
+                    System.out.println("        |                         ");
+                    System.out.println("________|_________                ");
+
+                }
+                if (count == 12) {
+                    System.out.println("Wrong guess, try again");
+                    System.out.println("        _______________________");
+                    System.out.println("        |  /                  |");
+                    System.out.println("        | /                   |       ");
+                    System.out.println("        |/                    O");
+                    System.out.println("        |                  -\\ | /-        ");
+                    System.out.println("        |                    \\|/");
+                    System.out.println("        |                     |");
+                    System.out.println("        |                     |");
+                    System.out.println("        |                    / \\");
+                    System.out.println("        |                  _/   \\_");
+                    System.out.println("        |                         ");
+                    System.out.println("        |                         ");
+                    System.out.println("________|_________                ");
+
                 }
             } else {
                 hyphen = newhyphen;
